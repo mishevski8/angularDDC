@@ -1,0 +1,27 @@
+
+/* Hide everything unneeded */
+
+header, nav, footer, .order-page-top-l, .btn_1 {display: none !important;}
+
+
+
+/* font sizes */
+
+body {
+
+	font: 10pt Sans-Serif, "Times New Roman", Times, serif;
+
+	line-height: 1.3;
+
+	color: #000;
+
+
+}
+.container {padding-top: 0px !important; padding-bottom: 0px;}
+.col-md-6 {width: 50%; float: left;}
+
+h1 {font-size: 24pt}
+
+
+
+h2 {font-size: 14pt; margin-top: 25px}

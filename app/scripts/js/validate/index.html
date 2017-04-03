@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>validate</title>
+
+    
+    <!-- Google web fonts -->
+   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+
+    <!-- BASE CSS -->
+    <link href="css/base.css" rel="stylesheet">
+    
+    <!-- SPECIFIC CSS -->
+    <link href="css/jquery.switch.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!--[if lte IE 8]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+<![endif]-->
+
+        
+        <div class="container margin_60">
+        	<div class="row">
+                
+                <div class="col-md-9">
+                <form id="quotation" action="quotation-normal.php" method="POST">
+                	<div class="form_title">
+                        <h3><strong><i class="icon-user-8"></i></strong>Personal info</h3>
+                        <p>
+                            Mussum ipsum cacilds, vidis litro abertis.
+                        </p>
+                    </div>
+                    <div class="step">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <label>First name</label>
+                                <input type="text" class="form-control required" id="firstname_quote" name="firstname_quote">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <label>Last name</label>
+                                <input type="text" class="form-control required" id="lastname_quote" name="lastname_quote">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control required" id="email_quote" name="email_quote">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <label>Telephone</label>
+                                <input type="text" class="form-control required" id="phone_quote" name="phone_quote">
+                            </div>
+                        </div>
+                    </div>
+                </div><!--End step -->
+                
+                <div class="form_title">
+                        <h3><strong><i class="icon-truck"></i></strong>Pick Up info</h3>
+                        <p>
+                            Mussum ipsum cacilds, vidis litro abertis.
+                        </p>
+                    </div>
+                    <div class="step">
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="form-group">
+							<label>Country</label>
+							<select class="form-control required" name="country_pickup" id="country_pickup">
+								<option value="" selected>Select your country</option>
+								<option value="Europe">Europe</option>
+								<option value="United states">United states</option>
+								<option value="Asia">Asia</option>
+							</select>
+						</div>
+					</div>
+                    <div class="col-md-6 col-sm-6">
+						<div class="form-group">
+							<label>City</label>
+							<input type="text" id="city_pickup" name="city_pickup" class="form-control required">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="form-group">
+							<label>Street line</label>
+							<input type="text" id="street_pickup" name="street_pickup" class="form-control required">
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="form-group">
+							<label>State</label>
+							<input type="text" id="state_pickup" name="state_pickup" class="form-control">
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="form-group">
+							<label>Postal code</label>
+							<input type="text" id="postal_code_pickup" name="postal_code_pickup" class="form-control required">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Floor</label>
+							<select class="form-control required" name="floor_pickup" id="floor_pickup">
+								<option value="" selected>Select your floor</option>
+								<option value="First floor">First floor</option>
+								<option value="Second floor">Second floor</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Elevator</label>
+							<select class="form-control required" name="elevator_pickup" id="elevator_pickup">
+								<option value="" selected>Elevator</option>
+								<option value="Yes">With elevator</option>
+								<option value="No">Without elevator</option>
+							</select>
+						</div>
+					</div>
+				</div><!--End row -->
+			</div><!--End step -->
+            
+            <div class="form_title">
+                        <h3><strong><i class="icon-truck"></i></strong>Delivery info</h3>
+                        <p>
+                            Mussum ipsum cacilds, vidis litro abertis.
+                        </p>
+                    </div>
+                    <div class="step">
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="form-group">
+							<label>Country</label>
+							<select class="form-control required" name="country_delivery" id="country_delivery">
+								<option value="" selected>Select your country</option>
+								<option value="Europe">Europe</option>
+								<option value="United states">United states</option>
+								<option value="Asia">Asia</option>
+							</select>
+						</div>
+					</div>
+                    <div class="col-md-6 col-sm-6">
+						<div class="form-group">
+							<label>City</label>
+							<input type="text" id="city_delivery" name="city_delivery" class="form-control required">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="form-group">
+							<label>Street line</label>
+							<input type="text" id="street_delivery" name="street_delivery" class="form-control required">
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="form-group">
+							<label>State</label>
+							<input type="text" id="state_delivery" name="state_delivery" class="form-control">
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="form-group">
+							<label>Postal code</label>
+							<input type="text" id="postal_code_delivery" name="postal_code_delivery" class="form-control required">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Floor</label>
+							<select class="form-control required" name="floor_delivery" id="floor_delivery">
+								<option value="" selected>Select your floor</option>
+								<option value="First floor">First floor</option>
+								<option value="Second floor">Second floor</option>
+								<option value="Othe">Other</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Elevator</label>
+							<select class="form-control required" name="elevator_delivery" id="elevator_delivery">
+								<option value="" selected>Elevator</option>
+								<option value="Yes">With elevator</option>
+								<option value="No">Without elevator</option>
+							</select>
+						</div>
+					</div>
+				</div><!--End row -->
+			</div><!--End step -->
+                        
+                <div class="form_title">
+                        <h3><strong><i class="icon-tasks"></i></strong>List of furniture</h3>
+                        <p>
+                            Mussum ipsum cacilds, vidis litro abertis.
+                        </p>
+                    </div>
+                    
+                    <div class="step">
+                     <h4 class="add_bottom_30">Kitchen <a href="#" class="tooltip-1" data-placement="top" title="Lorem ipsum dolor sit amet, sea tacimates adipiscing ei, utinam soluta pro ex."><i class="icon-help-circled-1"></i></a></h4>
+                     
+                      <div class="row">
+						<div class="col-md-6 col-sm-6">
+                        	<p><img src="img/kitchen.png" alt="" class="img-responsive" data-retina="true"></p>
+						</div>
+                        <div class="col-md-6 col-sm-6">
+                        	<div class="row">
+                            	<div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Table</label>
+                                        <select class="form-control required" name="kitchen_table" id="kitchen_table">
+                                        	<option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Seat</label>
+                                        <select class="form-control required" name="kitchen_seat" id="kitchen_seat">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--End row -->
+                            
+                            <div class="row">
+                            	<div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Fridge</label>
+                                        <select class="form-control required" name="kitchen_fridge" id="kitchen_fridge">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Gas Machine</label>
+                                        <select class="form-control required" name="kitchen_gas" id="kitchen_gas">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--End row -->
+                            
+						</div><!--End col-md-6 -->
+                 
+				</div><!--End row -->
+                
+                <hr>
+                
+                 <h4 class="add_bottom_30">Living room <a href="#" class="tooltip-1" data-placement="top" title="Lorem ipsum dolor sit amet, sea tacimates adipiscing ei, utinam soluta pro ex."><i class="icon-help-circled-1"></i></a></h4>
+                <div class="row">
+						<div class="col-md-6 col-sm-6">
+                        	<p><img src="img/living_room.png" alt="" class="img-responsive" data-retina="true"></p>
+						</div>
+                        <div class="col-md-6 col-sm-6">
+                        	<div class="row">
+                            	<div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Sofa</label>
+                                        <select class="form-control required" name="living_sofa" id="living_sofa">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Armchair</label>
+                                        <select class="form-control required" name="living_armchair" id="living_armchair">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--End row -->
+                            
+                            <div class="row">
+                            	<div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>TV</label>
+                                        <select class="form-control required" name="living_tv" id="living_tv">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Table</label>
+                                        <select class="form-control required" name="living_table" id="living_table">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--End row -->
+                            
+						</div><!--End col-md-6 -->
+                 
+				</div><!--End row -->
+                
+                <hr>
+                
+                 <h4 class="add_bottom_30">Dinning room <a href="#" class="tooltip-1" data-placement="top" title="Lorem ipsum dolor sit amet, sea tacimates adipiscing ei, utinam soluta pro ex."><i class="icon-help-circled-1"></i></a></h4>
+                <div class="row">
+						<div class="col-md-6 col-sm-6">
+                        	<p><img src="img/dinning_room.png" alt="" class="img-responsive" data-retina="true"></p>
+						</div>
+                        <div class="col-md-6 col-sm-6">
+                        	<div class="row">
+                            	<div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Table</label>
+                                        <select class="form-control required" name="dinning_table" id="dinning_table">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Seat</label>
+                                        <select class="form-control required" name="dinning_seat" id="dinning_seat">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--End row -->
+                            
+						</div><!--End col-md-6 -->
+                 
+				</div><!--End row -->
+                
+                <hr>
+                 <h4 class="add_bottom_30">Bed room</h4>
+                <div class="row">
+						<div class="col-md-6 col-sm-6">
+                        	<p><img src="img/bed_room.png" alt="" class="img-responsive" data-retina="true"></p>
+						</div>
+                        <div class="col-md-6 col-sm-6">
+                        	<div class="row">
+                            	<div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Double Bed</label>
+                                        <select class="form-control required" name="double_bed" id="double_bed">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Single Bed</label>
+                                        <select class="form-control required" name="single_bed" id="single_bed">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--End row -->
+                            
+                            <div class="row">
+                            	<div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Wardrobe</label>
+                                        <select class="form-control required" name="wardrobe" id="wardrobe">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                	<div class="form-group">
+                                        <label>Bedside table</label>
+                                        <select class="form-control required" name="bedside_table" id="bedside_table">
+                                            <option value="" selected>Quantity</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div><!--End row -->
+                            
+						</div><!--End col-md-6 -->
+				</div><!--End row -->
+			</div><!--End step -->
+            
+             <div class="form_title">
+                        <h3><strong><i class="icon-tools"></i></strong>Removal options</h3>
+                        <p>
+                            Mussum ipsum cacilds, vidis litro abertis.
+                        </p>
+                    </div>
+                    <div class="step">
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="form-group options">
+                        <strong>Packing service</strong>
+							<label class="switch-light switch-ios pull-right">
+                            <input type="checkbox" name="option_1" id="option_1" checked value="Yes">
+                            <span>
+                            <span>No</span>
+                            <span>Yes</span>
+                            </span>
+                            <a></a>
+                            </label>
+						</div>
+					</div>
+                    <div class="col-md-6 col-sm-6">
+						<div class="form-group options">
+							<strong>Reassembling</strong>
+							<label class="switch-light switch-ios pull-right">
+                            <input type="checkbox" name="option_2" id="option_2" checked value="Yes">
+                            <span>
+                            <span>No</span>
+                            <span>Yes</span>
+                            </span>
+                            <a></a>
+                            </label>
+						</div>
+					</div>
+				</div>
+                <div class="row">
+					<div class="col-md-6 col-sm-6">
+						<div class="form-group options">
+							<strong>Cleaning</strong>
+							<label class="switch-light switch-ios pull-right">
+                            <input type="checkbox" name="option_3" id="option_3" value="Yes">
+                            <span>
+                            <span>No</span>
+                            <span>Yes</span>
+                            </span>
+                            <a></a>
+                            </label>
+						</div>
+					</div>
+                    <div class="col-md-6 col-sm-6">
+						<div class="form-group options">
+							<strong>Short term deposit</strong>
+							<label class="switch-light switch-ios pull-right">
+                                <input type="checkbox" name="option_4" id="option_4" value="Yes">
+                                <span>
+                                <span>No</span>
+                                <span>Yes</span>
+                                </span>
+                                <a></a>
+                            </label>
+						</div>
+					</div>
+				</div><!--End row -->
+			</div><!--End step -->
+            
+            <div class="form_title">
+                <h3><strong><i class="icon-pencil-7"></i></strong>Notes</h3>
+                <p>
+                 	Mussum ipsum cacilds, vidis litro abertis.
+                </p>
+            </div>
+                    <div class="step">
+						<div class="form-group add_bottom_45">
+							<label>Write your notes or message</label>
+                            <textarea name="message_quote" id="message_quote" style="height:100px" class="form-control"></textarea>
+						</div>
+                     	<button type="submit"  class="btn_1 medium">Submit</button>
+			       </div><!--End step -->
+            
+ 					</form>
+                </div><!-- End col-md-9 -->
+                
+            </div><!-- End row -->
+        </div><!-- End container -->
+
+    <footer>
+        <div class="container">
+            <div class="row ">
+			</div><!-- End container -->
+    </footer><!-- End footer -->
+    
+
+    
+
+<!-- Common scripts -->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/common_scripts_min.js"></script>
+<script src="js/functions.js"></script>
+
+<!-- Specific scripts -->
+<script src="js/jquery.validate.js"></script>
+<script>
+  $("#quotation").validate();
+</script>
+
+</body>
+</html>

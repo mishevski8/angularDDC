@@ -1,0 +1,200 @@
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-rose{
+	background: #fa4a86;
+	color: #fff!important;
+	border: 1px solid #fa4a86;
+}
+.btn-bg{
+	padding: 12px 30px;
+    min-width: 160px;
+}
+.btn-rose:hover{
+    text-decoration: none;
+    box-shadow: 0px 2px 0px #c82d61 !important;
+    color: #fff;
+}
+#white{
+	position: fixed;
+}
+.current{color: #252525 !important;}
+
+@media only screen and (max-width: 991px){
+.cmn-toggle-switch span, .cmn-toggle-switch span::before, .cmn-toggle-switch span::after{
+    background: #252525 !important;
+}
+.cmn-toggle-switch {top: 8px;}
+}
+
+.platform-hero{
+	background: center bottom no-repeat url(../img/ddc-bg-about-hero.jpg);
+    background-size: cover;
+    min-height: 800px;
+}
+.platform-hero hgroup, .platform-features hgroup{text-align: center; padding-top: 50px;}
+.platform-hero hgroup h2, .platform-features hgroup h2, .platform-insurance hgroup h2{
+	color: #252525;
+    padding-top: 50px;
+    font-size: 40px;
+}
+.platform-hero hgroup p, .platform-features hgroup p, .platform-insurance hgroup p{
+	font-size: 18px;
+	line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+    padding-bottom: 50px;
+}
+.platform-hero hgroup p{padding-bottom: 30px;}
+@media (max-width: 450px){
+	hgroup{
+		margin-bottom: 50px !important;
+	}
+	.platform-hero{
+		min-height: 1000px;
+	}
+	.platform-insurance img{
+		margin-left: 0 !important;
+	}
+}
+@media (min-width: 1450px){
+	.platform-hero{
+		min-height: 900px;
+	}
+}
+
+.platform-features{
+	background: #fff;
+	border-bottom: solid 1px #e9f0f3;
+    padding-bottom: 100px;
+}
+.platform-features h2{padding-top: 0 !important;}
+.feature{
+	padding: 20px 0px 0px 80px;
+    position: relative;
+    background: #fff;
+    margin-bottom: 50px;
+    color: #576366;
+}
+.feature i{
+	margin:0;
+	position:absolute; 
+	top:35px;
+	left: 0px;
+	padding:0;
+	margin:0;
+	width:65px;
+	height:65px;
+	line-height:60px;
+	text-align:center;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border:1px dashed #ccc;
+	font-size:34px;
+	color:#3aa3e3;
+}
+.feature h3{
+	margin-bottom: 15px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 20px;
+}
+.feature p{
+	font-size: 16px;
+}
+.video-btn{
+	text-transform: uppercase;
+    font-size: 15px;
+}
+.video-btn i{
+	font-size: 25px;
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+
+.platform-mobile-devices{
+	padding: 30px 0 0;
+}
+.platform-mobile-devices h2, .platform-easy h2, .platform-insurance h2{
+	color: #252525;
+	margin-bottom: 30px;
+}
+.platform-mobile-devices p, .platform-easy p, .platform-insurance p{
+	font-size: 16px;
+	color: #576366;
+	margin-bottom: 20px;
+	line-height: 1.8em;
+}
+.app-store{margin-top: 40px;}
+.app-store img{width: 135px;}
+.app-store img:hover{opacity: .8}
+.platform-get-started{
+	text-align: center;
+	height: 320px;
+    position: relative;
+    background: url('../img/car-bg3.jpg') no-repeat center center;
+    color: #fff;
+	background-size: cover;
+}
+.bg-layer{
+	padding: 50px 0 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.platform-get-started h2{
+	color: #fff;
+	font-size: 45px;
+	font-weight: 700;
+}
+.platform-get-started p{
+	font-size: 18px;
+	color: #fff;
+	margin: 25px 0;
+}
+.platform-insurance{
+	background: #f9f9f9;
+	padding-bottom: 50px;
+	border-top: solid 1px #e9f0f3;
+}
+.platform-insurance h3{color: #252525; margin-bottom: 20px;}
+.platform-insurance hgroup {text-align: center;}
+.platform-insurance img{width: 100%; margin-left: 20px;}
+.platform-easy{
+	background: #f9f9f9 url('../img/easy.png') no-repeat right center;
+	border-bottom: solid 1px #e9f0f3;
+	background-size: contain;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+@media (max-width: 1045px){
+.platform-easy {
+	background-image: none;
+	}
+}
+.platform-easy img{
+	width: 100%;
+}

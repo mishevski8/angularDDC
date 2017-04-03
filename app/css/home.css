@@ -1,0 +1,294 @@
+/*-------- home page--------*/
+.list-your-car{
+	position: relative;
+	font-size: 16px;
+	padding-bottom: 60px;
+	border-bottom: solid 1px #e9f0f3;
+	
+}
+.list-img{
+	width: 100%;
+	margin-top: 70px;
+	margin-left: 30px;
+}
+#logo, nav{padding: 20px 0;}
+
+.list-your-car h2{
+	color: #252525;
+	padding-top: 40px;
+	font-size: 32px;
+	margin-bottom: 20px;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+.list-your-car p{
+	line-height: 1.82rem;
+	font-size: 1.0625rem;
+    color: #555459;
+}
+.list-your-car ul{
+	margin-top: 25px;
+    margin-bottom: 30px;
+    padding-left: 0;
+    list-style: none;
+}
+.list-your-car ul li{
+	margin-bottom: 15px;
+    position: relative;
+    color: #555459;
+    font-size: 1.0625rem;
+}
+.list-your-car ul li:before{
+	content: '\ee1d';
+    color: #fa4a86;
+    font-family: "fontello";
+    font-size: 22px;
+    margin-right: 10px;
+}
+.list-your-car .btn {margin-right: 10px;}
+.list-your-car .learn-more {margin-left: 10px;}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-rose{
+	background: #fa4a86;
+	color: #fff!important;
+	border: 1px solid #fa4a86;
+}
+.btn-blue{
+	background: #3aa3e3;
+	color: #fff!important;
+	border: 1px solid #3aa3e3;
+}
+.btn-bg{
+	padding: 12px 30px;
+    min-width: 160px;
+}
+.btn-rose:hover{
+    text-decoration: none;
+    box-shadow: 0px 2px 0px #c82d61 !important;
+    color: #fff;
+}
+.btn-blue:hover{
+	text-decoration: none;
+    box-shadow: 0px 2px 0px #2072A2 !important;
+    color: #fff;
+}
+.btn-transparent{
+	background-color: transparent;
+	color: #fa4a86;
+	font-weight: 700;
+	border: 2px solid #fa4a86;
+	font-size: 18px;
+}
+.btn-transparent:hover{
+	background-color:#fa4a86;
+	color: #fff;
+}
+.white{
+	color: #fff;
+	border-color: #fff;
+}
+.white:hover{
+	background-color:#fff;
+	color: #3aa3e3;
+}
+.learn-more{
+	font-size: 16px;
+}
+.learn-more:hover{text-decoration: underline;}
+.how-it-works-first{
+	border-top: solid 1px #e9f0f3;
+	background: #f9f9f9;
+}
+.how-it-works-first hgroup, .top-cars hgroup, .blog hgroup, .how-it-works-new hgroup{text-align: center;}
+.how-it-works-first hgroup h2, .top-cars hgroup h2, .blog hgroup h2, .how-it-works-new hgroup h2{
+	color: #252525;
+	padding-top: 50px;
+	font-size: 40px;
+	font-weight: 700;
+}
+.how-it-works-first hgroup p, .top-cars hgroup p, .blog hgroup p, .how-it-works-new hgroup p{
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 0px !important;
+	border-bottom: 1px solid #e9f0f3;
+	padding-bottom: 50px;
+}
+.how-it-works-new{
+	border-bottom: solid 1px #e9f0f3;
+    background: #f9f9f9;
+    padding-bottom: 70px;
+}
+.how-it-works-new figure{text-align: center;}
+
+.how-it-works-new h3{
+	color: #252525;
+	font-size: 24px;
+	font-weight: 900;
+	margin: 25px 0 15px;
+}
+.how-it-works-new p{
+	font-size: 16px;
+	padding-bottom: 50px;
+}
+/*
+.how-it-works-new figure:before{
+	background: no-repeat center center url(../img/ico-arrow-works.png);
+    background-size: 19px;
+    width: 19px;
+    height: 43px;
+    content: '';
+    position: absolute;
+    top: 85px;
+    right: -10px;
+}
+.how-it-works-new .last-step:before{
+	background: none;
+}
+*/
+.how-it-works-icon{
+	color: #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 70px;
+    margin: 0 auto;
+    font-size: 46px;
+    line-height: 115px;
+}
+.green{background: #e69db2 !important;}
+.red{background: #abd1e8 !important;}
+.yellow{background: #ffd6a3 !important;}
+.top-cars hgroup p, .blog hgroup p, .how-it-works-new hgroup p {border-bottom: none !important;}
+
+.signup-home{
+	background: url(../img/cityscape.svg) center bottom repeat-x #35404F;
+	background-size: 1000px auto;
+	padding-top: 7rem;
+    padding-bottom: 8rem;
+}
+.signup-home h2{
+	font-size: 45px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 80px;
+    margin-bottom: 20px;
+}
+.signup-home .btn{
+	font-weight: 700;
+	font-size: 18px;
+}
+.btn-help {
+    color: #fff;
+    font-weight: 400;
+    display: block;
+    margin-top: .5rem;
+    }
+    
+.top-cars{
+	background: #f9f9f9;
+}
+.top-cars .center{
+	margin-bottom: 70px;
+}
+
+.blog{
+	padding-bottom: 70px;
+	border-bottom: solid 1px #e9f0f3;
+}
+.blog-post{margin-bottom: 50px;}
+.blog-post img{
+	max-width: 100%;
+	height: auto;
+/* 	transition:  0.5s ease; */
+}
+.blog-post img:hover{opacity: .9;}
+.blog-post h3{
+	color: #252525;
+    font-size: 24px;
+    margin: 15px 0 15px;
+    -webkit-transition: color .6s ease;
+    -moz-transition: color .6s ease;
+    transition: color .6s ease;
+}
+.blog-post h3:hover{color: #3aa3e3}
+.blog-post .date{color: #252525;}
+.blog .center a{font-size: 18px;}
+.blog .center a:hover{text-decoration: underline;}
+
+@media (max-width: 990px) and (min-width: 400px){
+.how-it-works-new figure{max-width: 500px; margin: 0 auto;
+}
+}
+.new-way-car-rent{
+	padding-bottom: 50px;
+	border-bottom: solid 1px #e9f0f3;
+}
+.new-way-car-rent h1{
+	color: #252525;
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	margin-top: 50px;
+}
+.new-way-car-rent hgroup p{
+	font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+    text-align: center;
+}
+.new-way-car-rent img{
+	width: 100%;
+	margin-top: 70px;
+}
+.rent-types{
+	margin-top: 70px;
+	margin-left: 50px;
+}
+.rent-types h3{
+	font-size: 22px;
+	color: #252525;
+	font-weight: 900;
+}
+.rent-types figure{
+	width: 450px;
+}
+.rent-types p{
+	font-size: 16px;
+	line-height: 1.8em;
+}
+.rent-types a:hover{
+	text-decoration: underline;
+}
+@media (max-width: 990px) and (min-width: 400px){
+	.rent-types figure{
+	width: auto;
+	}
+	.list-img{margin-left: 0;}
+}
+@media (max-width: 450px){
+	.rent-types{
+	margin-left: 0;
+	}
+	.rent-types figure{
+	width: auto;
+	}
+	.list-img{margin-left: 0; margin-top: 50px;}
+}

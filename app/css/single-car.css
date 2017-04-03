@@ -1,0 +1,28 @@
+label{
+	font-size: 13px;
+	font-weight: 900;
+}
+.table.table_summary td{font-size: 13px; color: #252525}
+.fix-share{margin-bottom: 15px; color: #252525; padding: 10px; border: 1px solid #fff;}
+.fix-share span{
+	display: block;
+}
+.fix-share .months, .fix-share .days{
+	border-bottom: 1px solid #ededed;
+	margin-bottom: 5px;
+	color: #576366;
+}
+.selected{
+	background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+}
+.selected:hover{
+	cursor: default !important;
+}
+.fix-share:hover{
+	background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    cursor: pointer;
+}

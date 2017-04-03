@@ -1,0 +1,1525 @@
+<div class="layer">
+</div>
+<!-- Mobile menu overlay mask -->
+<!-- Header================================================== -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div id="logo">
+                    <a href="/">
+                        <img alt="Drive Drive Car" class="logo_normal" src="img/new-logo.svg" style="width: 210px;"/>
+                    </a>
+                </div>
+            </div>
+            <nav class="col-md-9 col-sm-9 col-xs-9">
+                <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);">
+                    <span>
+                        Menu mobile
+                    </span>
+                </a>
+                <div class="main-menu">
+                    <div id="header_menu">
+                        <img alt="Drive Driv Car" height="35" src="img/logo.svg" w="">
+                        </img>
+                    </div>
+                    <a class="open_close" href="#" id="close_in">
+                        <i class="icon_set_1_icon-77">
+                        </i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="{{ url('list-car') }}">
+                                List Your Car
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url('platform') }}">
+                                Platform
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url('how-it-works') }}">
+                                How it works
+                            </a>
+                        </li>
+                        <!--    @if(Auth::check()) -->
+                        <li>
+                            <div class="dropdown-user">
+                                <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            {{ Auth::user()->firstName }}
+                                    <div class="indicator">
+                                    </div>
+                                </a> -->
+                                <ul class="dropdown-menu" id="dropdown_user">
+                                    <li>
+                                        <a href="{{ url('dashboard') }}">
+                                            Dashboard
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('user/owncars') }}">
+                                            Own Cars
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('user/rentedcars') }}">
+                                            Rented Cars
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('profile') }}">
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('logout') }}">
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--     @else -->
+                        <li>
+                            <a href="{{ url('sign-up') }}">
+                                Sign up
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sign-in" ng-href="#/login">
+                                Sign in
+                            </a>
+                        </li>
+                        <!--     @endif -->
+                    </ul>
+                </div>
+                <!-- End main-menu -->
+            </nav>
+        </div>
+    </div>
+    <!-- container -->
+</header>
+<!-- End Header -->
+<section id="hero">
+    <div class="intro_title">
+        <h1>
+            Rent a car near you
+        </h1>
+        <h3>
+            A new way for renting or listing car is available now with
+            <strong>
+                Drive Drive Car
+            </strong>
+        </h3>
+    </div>
+    <div id="search_bar_container">
+        <div class="container">
+            <form action="search" id="searchFrm" method="get">
+                <div class="search_bar">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="calendar-i-h">
+                                    <i class="icon-location">
+                                    </i>
+                                    <input class="form-control" id="search-car" name="location" placeholder="" type="text">
+                                        <input id="lat" name="lat" type="hidden"/>
+                                        <input id="lng" name="lng" type="hidden"/>
+                                    </input>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group sel">
+                                <select data-placeholder="Select category" name="rentType">
+                                    <option selected="" value="rent">
+                                        Rent a Car
+                                    </option>
+                                    <option value="test">
+                                        Test a Car
+                                    </option>
+                                    <option value="fix">
+                                        Fix Car Share
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <div class="calendar-i-h">
+                                    <i class="icon-calendar-7">
+                                    </i>
+                                    <input class=" form-control" data-date-format="M d, yyyy" id="pickUpDate" name="pickUpDate" placeholder="Pick Up Date" type="text">
+                                    </input>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <div class="calendar-i-h">
+                                    <i class=" icon-calendar-7">
+                                    </i>
+                                    <input class="form-control" data-date-format="M d, yyyy" id="returnDate" name="returnDate" placeholder="Return Date" type="text">
+                                    </input>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <button class="btn_1 fwh" type="submit">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="padding-right: 5px;">
+                            <p class="insurance">
+                                Cars insured by
+                                <a href="#">
+                                    Insurance
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /search_bar-->
+</section>
+<!-- End hero -->
+<section class="new-way-car-rent">
+    <div class="container">
+        <hgroup>
+            <h1>
+                New way of renting cars.
+            </h1>
+            <p>
+                With DriveDriveCar you are able to rent the car you need and here some text good as an explanation.
+            </p>
+        </hgroup>
+        <div class="row">
+            <div class="col-md-6">
+                <img alt="" src="img/list-car.png">
+                </img>
+            </div>
+            <div class="col-md-6">
+                <div class="rent-types">
+                    <figure>
+                        <h3>
+                            Rent Car
+                        </h3>
+                        <p>
+                            <a href="#">
+                                Rent Car
+                            </a>
+                            is a platform that allows users to rent a car directly from a person or company that owns one or more vehicles.
+                        </p>
+                    </figure>
+                    <figure>
+                        <h3>
+                            Test Car
+                        </h3>
+                        <p>
+                            <a href="#">
+                                Test Car
+                            </a>
+                            is a platform that allows users to test a car they plan to buy. The user assumes the vehicle at the delivery point and returns to the agreed place.
+                        </p>
+                    </figure>
+                    <figure>
+                        <h3>
+                            Fix Car Share
+                        </h3>
+                        <p>
+                            <a href="#">
+                                Fix Car Share
+                            </a>
+                            is a platform that allows users to rent a car directly from a person or company that owns one or more cars in intervals that were previously fixed.
+                        </p>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-it-works-new">
+    <div class="container">
+        <hgroup>
+            <h2>
+                How it works?
+            </h2>
+            <p>
+                Renting or listing cars has never been easier with
+                <strong>
+                    DriveDriveCar
+                </strong>
+                platform.
+            </p>
+        </hgroup>
+        <div class="row">
+            <div class="col-md-4">
+                <figure>
+                    <div class="how-it-works-icon green">
+                        <i class="icon-user">
+                        </i>
+                    </div>
+                    <h3>
+                        <span>
+                            1.
+                        </span>
+                        Create an Account
+                    </h3>
+                    <p>
+                        Sign up with Facebook, LinkedIn or your email. Enter your personal details, so we confirm you as approved user on the platform.
+                    </p>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure>
+                    <div class="how-it-works-icon red">
+                        <i class="icon-search">
+                        </i>
+                    </div>
+                    <h3>
+                        <span>
+                            2.
+                        </span>
+                        Rent or List Car
+                    </h3>
+                    <p>
+                        Search and find your desired car for rent, or list your car for free and receive orders for rent by other users.
+                    </p>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="last-step">
+                    <div class="how-it-works-icon yellow">
+                        <i class="icon-money-1">
+                        </i>
+                    </div>
+                    <h3>
+                        <span>
+                            3.
+                        </span>
+                        Enjoy & Earn Money
+                    </h3>
+                    <p>
+                        For a few days or weeks, enjoy driving the car you rented. As owner earn money from the car you listed by renting from other users.
+                    </p>
+                </figure>
+            </div>
+            <div class="col-md-12 center">
+                <a class="btn btn-blue btn-bg" href="{{ url('how-it-works') }}">
+                    Learn more about how it works
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="list-your-car">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h2>
+                    Start earning money with your idle car!
+                </h2>
+                <p>
+                    When you're not using your car, list it and share it using our easy & friendly platform. You decide when your car is available for renting and use it when you want.
+                </p>
+                <ul>
+                    <li>
+                        No membership fees. DDC is free to join
+                    </li>
+                    <li>
+                        All rentals include insurance & 24/7 roadside assistance
+                    </li>
+                    <li>
+                        Smart technology makes sharing your car safe & easy
+                    </li>
+                </ul>
+                <a class="btn btn-rose btn-bg" href="#">
+                    List Your Car
+                </a>
+                or
+                <a class="learn-more" href="#">
+                    Learn More
+                </a>
+            </div>
+            <div class="col-md-7">
+                <img alt="List your car Drive Drive Car" class="list-img" src="img/list-car.jpg"/>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="top-cars">
+    <div class="container">
+        <hgroup>
+            <h2>
+                Most popular cars
+            </h2>
+            <p>
+                Check cars that have best ratings by our users and are often rented.
+            </p>
+        </hgroup>
+        <div class="tabs" id="tabs">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#section-1">
+                            <span>
+                                Rent Car
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section-2">
+                            <span>
+                                Test Car
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section-3">
+                            <span>
+                                Fix Car Share
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content">
+                <section id="section-1">
+                    <div class="row list_tours_tabs">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car1.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Skopje, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    39
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Audi A4
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (75)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car2.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kumanovo, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    55
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Toyota Yaris
+                                        </strong>
+                                        petrol
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (22)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car3.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kocani, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    75
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            BMW X5
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-voted">
+                                        </i>
+                                        <small>
+                                            (62)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car1.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kumanovo, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    39
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Audi A4
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (75)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car2.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Ohrid, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    55
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Toyota Yaris
+                                        </strong>
+                                        petrol
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (22)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car3.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kumanovo, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    75
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            BMW X5
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-voted">
+                                        </i>
+                                        <small>
+                                            (62)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="center">
+                            <a class="btn btn-blue btn-bg" href="#">
+                                View All Cars
+                                <b>
+                                    (1544)
+                                </b>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-2">
+                    <div class="row list_tours_tabs">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car3.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kumanovo, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    75
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            BMW X5
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-voted">
+                                        </i>
+                                        <small>
+                                            (62)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car1.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Skopje, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    39
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Audi A4
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (75)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car2.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kumanovo, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    55
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Toyota Yaris
+                                        </strong>
+                                        petrol
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (22)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car3.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kocani, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    75
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            BMW X5
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-voted">
+                                        </i>
+                                        <small>
+                                            (62)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car1.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kumanovo, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    39
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Audi A4
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (75)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car2.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Ohrid, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    55
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Toyota Yaris
+                                        </strong>
+                                        petrol
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (22)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="center">
+                            <a class="btn btn-blue btn-bg" href="#">
+                                View All Cars
+                                <b>
+                                    (1544)
+                                </b>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section-3">
+                    <div class="row list_tours_tabs">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car2.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kumanovo, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    55
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Toyota Yaris
+                                        </strong>
+                                        petrol
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (22)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car1.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Skopje, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    39
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Audi A4
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (75)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car3.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kocani, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    75
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            BMW X5
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-voted">
+                                        </i>
+                                        <small>
+                                            (62)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car1.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kumanovo, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    39
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Audi A4
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (75)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car2.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Ohrid, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    55
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            Toyota Yaris
+                                        </strong>
+                                        petrol
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star">
+                                        </i>
+                                        <small>
+                                            (22)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="car_container">
+                                <div class="img_container">
+                                    <a href="#">
+                                        <img alt="" class="img-responsive" src="img/car3.jpg">
+                                            <div class="short_info">
+                                                <i class="icon_set_1_icon-41">
+                                                </i>
+                                                Kumanovo, Macedonia
+                                                <span class="price">
+                                                    <sup>
+                                                        $
+                                                    </sup>
+                                                    75
+                                                </span>
+                                            </div>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="car_title">
+                                    <h3>
+                                        <strong>
+                                            BMW X5
+                                        </strong>
+                                        diesel
+                                    </h3>
+                                    <div class="rating">
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-star voted">
+                                        </i>
+                                        <i class="icon-voted">
+                                        </i>
+                                        <small>
+                                            (62)
+                                        </small>
+                                    </div>
+                                    <!-- end rating -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-md-4 -->
+                        <div class="center">
+                            <a class="btn btn-blue btn-bg" href="#">
+                                View All Cars
+                                <b>
+                                    (1544)
+                                </b>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- /content -->
+        </div>
+        <!-- End tabs -->
+    </div>
+    <!-- End container -->
+</section>
+<section class="signup-home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 center">
+                <h2>
+                    Start renting your car today.
+                </h2>
+                <a class="btn btn-rose btn-bg" href="#">
+                    Try it for free
+                    <i class="icon-right-2">
+                    </i>
+                </a>
+                <span class="btn-help">
+                    No credit card required.
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog">
+    <div class="container">
+        <hgroup>
+            <h2>
+                Tips & Articles
+            </h2>
+            <p>
+                Browse the latest articles from our blog.
+            </p>
+        </hgroup>
+        <div class="row">
+            <div class="col-md-4">
+                <figure class="blog-post">
+                    <a href="#">
+                        <img alt="Headline blog post" src="img/blog1.jpg"/>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            Interesting blog title here
+                        </h3>
+                    </a>
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium dolorem. Proin gravida ...
+                    </p>
+                    <p class="date">
+                        <i class="icon-clock-alt">
+                        </i>
+                        March 4, 2016
+                    </p>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="blog-post">
+                    <a href="#">
+                        <img alt="Headline blog post" src="img/blog2.jpg"/>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            Interesting blog title here
+                        </h3>
+                    </a>
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium dolorem. Proin gravida ...
+                    </p>
+                    <p class="date">
+                        <i class="icon-clock-alt">
+                        </i>
+                        March 4, 2016
+                    </p>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="blog-post">
+                    <a href="#">
+                        <img alt="Headline blog post" src="img/blog3.jpg"/>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            Interesting blog title here
+                        </h3>
+                    </a>
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium dolorem. Proin gravida ...
+                    </p>
+                    <p class="date">
+                        <i class="icon-clock-alt">
+                        </i>
+                        March 4, 2016
+                    </p>
+                </figure>
+            </div>
+            <div class="col-md-12 center mt30">
+                <a href="#">
+                    Check other blog articles
+                    <i class="icon-right-big">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-3">
+                <h3>
+                    Need help?
+                </h3>
+                <a href="#" id="phone">
+                    +11 22 33 44 55
+                </a>
+                <a href="#" id="email_footer">
+                    help@drivedrivecar.com
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <h3>
+                    About
+                </h3>
+                <ul>
+                    <li>
+                        <a href="{{ url('about') }}">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('faq') }}">
+                            Help Center
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('contact') }}">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('privacy') }}">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('terms') }}">
+                            Terms & Condition
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <h3>
+                    Discover
+                </h3>
+                <ul>
+                    <li>
+                        <a href="{{ url('blog') }}">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('platform') }}">
+                            Platform
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('how-it-works') }}">
+                            How it Works
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-3">
+                <h3>
+                    Settings
+                </h3>
+                <div class="styled-select">
+                    <select class="form-control" id="lang" name="lang">
+                        <option selected="" value="English">
+                            English
+                        </option>
+                        <option value="French">
+                            French
+                        </option>
+                        <option value="Spanish">
+                            Spanish
+                        </option>
+                        <option value="Russian">
+                            Russian
+                        </option>
+                    </select>
+                </div>
+                <div class="styled-select">
+                    <select class="form-control" id="currency" name="currency">
+                        <option selected="" value="USD">
+                            USD
+                        </option>
+                        <option value="EUR">
+                            EUR
+                        </option>
+                        <option value="GBP">
+                            GBP
+                        </option>
+                        <option value="RUB">
+                            RUB
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="social_footer">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="icon-facebook">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-twitter">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-google">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-instagram">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-youtube-play">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon-linkedin">
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        © 2016 DriveDriveCar ™ Inc.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- End row -->
+    </div>
+    <!-- End container -->
+</footer>
+<!-- End footer -->
+<div id="toTop">
+</div>
+<!-- Back to top button -->
