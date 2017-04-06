@@ -12,10 +12,10 @@ angular.module('angularDdcApp', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRout
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
-    }).when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+    }).when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterCtrl',
+        controllerAs: 'register'
     }).when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',

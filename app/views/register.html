@@ -1,0 +1,225 @@
+<div class="layer">
+</div>
+<!-- Mobile menu overlay mask -->
+<section class="login" id="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                <div class="mb30" id="login">
+                    <div id="logo">
+                        <a ng-href="#/">
+                            <img alt="Drive Drive Car" src="img/new-logo-color.svg" width="230"/>
+                        </a>
+                    </div>
+                    <h2>
+                        Create your account
+                    </h2>
+                    <hr>
+                        <form id="signUpFrm" ng-submit="register.register()">
+                            <!-- <input name="role" ng-model="register.registration.role" type="hidden" value="private"/> -->
+                            <div class="row">
+                                <div class="form-group signup center mb15">
+                                    <input checked="" id="private" name="type" ng-model="register.registration.role" type="radio" value="customer">
+                                        <label>
+                                            Private
+                                            <!-- {{Lang::get('messages.auth.private')}} -->
+                                        </label>
+                                        <input id="company" name="type" ng-model="register.registration.role" type="radio" value="company">
+                                            <label>
+                                                Company
+                                                <!-- {{Lang::get('messages.auth.company')}} -->
+                                            </label>
+                                        </input>
+                                    </input>
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <a class="btn btn-primary btn-block facebook" href="login/facebook">
+                                        <i class="icon-facebook">
+                                        </i>
+                                        Sign in with Facebook
+                                    </a>
+                                </div>
+                                <!-- <div class="col-md-12 col-sm-12 mt10">
+                                    <a class="btn btn-info btn-block linkedin" href="login/linkedin">
+                                        <i class="icon-linkedin">
+                                        </i>
+                                        Sign in with LinkedIn
+                                    </a>
+                                </div> -->
+                            </div>
+                            <!-- end row -->
+                            <div class="login-or">
+                                <hr class="hr-or">
+                                    <span class="span-or">
+                                        or
+                                    </span>
+                                </hr>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="firstName" ng-model="register.registration.first_name" placeholder="First Name" type="text">
+                                </input>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="lastName" ng-model="register.registration.last_name" placeholder="Last Name" type="text">
+                                </input>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="email" ng-model="register.registration.email" placeholder="E-mail" type="text">
+                                </input>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="inputPassword" name="password" ng-model="register.registration.password" placeholder="Password" type="password">
+                                    <span class="password-icon">
+                                    </span>
+                                </input>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="inputPassword" name="repassword" ng-model="register.registration.password_confirmation" placeholder="Confirm Password" type="password">
+                                    <span class="password-icon">
+                                    </span>
+                                </input>
+                            </div>
+                            <p class="wrong hidden">
+                            </p>
+                            <p class="success hidden">
+                            </p>
+                            <p class="small">
+                                Clicking the “Create Account” button you agree to our
+                                <a href="#">
+                                    Terms of Service
+                                </a>
+                                .
+                            </p>
+                            <button class="btn_full" type="submit">
+                                Create Account
+                            </button>
+                            <hr>
+                                <p>
+                                    Already have an account?
+                                    <a ng-href="/login">
+                                        Sign in
+                                    </a>
+                                </p>
+                            </hr>
+                        </form>
+                    </hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Common scripts -->
+<script src="scripts/js/common_scripts_min.js">
+</script>
+<script src="scripts/js/functions.js">
+</script>
+<!-- Check and radio inputs -->
+<script src="scripts/js/icheck.js">
+</script>
+<script>
+    $('input').on('ifChecked', function(event){
+        if(event.type ==="ifChecked"){
+            $(this).trigger('click');  
+            $('input').iCheck('update');
+        }
+    }).iCheck({
+        checkboxClass: 'icheckbox_square-grey',
+        radioClass: 'iradio_square-grey'
+    });
+</script>
+<script src="scripts/js/validate/js/jquery.validate.js">
+</script>
+<script type="text/javascript">
+    $("#signUpFrm").validate({
+        rules: {
+            firstName: {
+                required: true,
+                minlength: 2
+            },
+            lastName: {
+                required: true,
+                minlength: 2
+            },
+            password: {
+                required: true,
+                minlength: 8
+            },
+            repassword: {
+                equalTo: "input[name*='password']"
+            },
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            email: {
+                required: "Please enter your email address",
+                email: "Please enter a valid email address"
+            },
+            password: {
+                required: "Can not be blank"
+            },
+            repassword: {
+                equalTo: "Passwords do not match"
+            }
+        }
+    });
+    /*$("#signUpFrm").submit(function(){
+        $.ajax({
+            url: this.action,
+            type: this.method,
+            data: $(this).serialize(),
+            
+            success: function(response) {
+                if(response.code==200){
+                    $('.wrong').addClass('hidden');
+                    $('.success').html(response.response).removeClass('hidden');
+                    $('.resend').click(function(){
+                        $("#signUpFrm").trigger('submit');
+                    });
+                }else{
+                    
+                    $('.success').addClass('hidden');
+                    $('.wrong').html(response.response).removeClass('hidden');
+                }
+                
+            },
+            error:function(xhr, ajaxOptions, thrownError) {
+                if(xhr.status==403) {
+                    var m = eval('('+xhr.responseText+')');
+                    
+                }
+            }
+            
+        });
+        return false;
+    })*/
+    
+    $(document).ready(function() {
+        $('input[type=radio][name=type]').click(function() {
+            $('input').iCheck('update');
+            if($(this).is(':checked')){
+                $('input[type=text][name=firstName]').val('');
+                $('input[type=text][name=lastName]').val('');
+                if(this.value == 'customer'){
+                   /* $('input[type=hidden][name=role]').val('private');*/
+                    $('input[type=text][name=firstName]').prop('placeholder', 'First Name');
+                    $('input[type=text][name=lastName]').removeClass('hidden');
+                    $('.login-or').removeClass('hidden');
+                    $('.facebook').removeClass('hidden');
+                    $('.linkedin').removeClass('hidden');
+                }
+                else if(this.value == 'company'){
+                    /*$('input[type=hidden][name=role]').val('company');*/
+                    $('input[type=text][name=firstName]').prop('placeholder', 'Company Name');
+                    $('input[type=text][name=lastName]').addClass('hidden');
+                    $('.login-or').addClass('hidden');
+                    $('.facebook').addClass('hidden');
+                    $('.linkedin').addClass('hidden');
+                    
+                }
+            }
+        });
+    });
+</script>

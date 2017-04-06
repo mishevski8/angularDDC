@@ -82,7 +82,7 @@
                         </li>
                         <!--     @else -->
                         <li>
-                            <a href="{{ url('sign-up') }}">
+                            <a ng-href="#/register">
                                 Sign up
                             </a>
                         </li>
@@ -1523,3 +1523,67 @@
 <div id="toTop">
 </div>
 <!-- Back to top button -->
+<script src="scripts/js/common_scripts_min.js">
+</script>
+<script src="scripts/js/functions.js">
+</script>
+<script src="scripts/js/tabs.js">
+</script>
+<script type="text/javascript">
+    new CBPFWTabs($('#tabs')[0]);
+
+    var search = document.getElementById('search-car');
+    var options = {
+        types:['(cities)']
+    }
+    var autocomplete = new google.maps.places.Autocomplete(search,options);
+
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        fillInLatLng();
+    });
+
+    function fillInLatLng(){
+        var place = autocomplete.getPlace();
+        $('#lat').val(place.geometry.location.lat());
+        $('#lng').val(place.geometry.location.lng());
+    }
+
+    // iCheck
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_square-grey',
+        radioClass: 'iradio_square-grey'
+    });
+
+    // Datepicker
+    $('#pickUpDate').datepicker({
+        startDate: new Date(),
+        // autoclose: true,
+    }).on('changeDate', function (selected) {
+        var startDate = new Date(selected.date.valueOf());
+        $('#returnDate').datepicker('setStartDate', startDate);
+    }).on('clearDate', function (selected) {
+        $('#returnDate').datepicker('setStartDate', null);
+    });
+    $('#returnDate').datepicker('setStartDate', new Date());
+
+    // Ddsclick
+    $("select.ddslick").each(function(){
+        $(this).ddslick({
+            showSelectedHTML: true
+        });
+    });
+
+    // Validate form
+    $("#searchFrm").validate({
+        rules: {
+            location: {
+                required: true
+            }
+        },
+        messages: {
+            location: {
+                required: 'Please set a location'
+            }
+        }
+    });
+</script>
